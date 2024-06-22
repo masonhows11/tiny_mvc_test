@@ -2,6 +2,7 @@
 
 namespace system\router;
 
+use ReflectionMethod;
 
 class Routing{
 
@@ -19,8 +20,6 @@ class Routing{
 
     public function run()
     {
-
-
         //// found and set controller
         $path = realpath(dirname(__FILE__)."/../../application/controllers/". $this->current_route[0]."php");
         if(!file_exists($path)){
@@ -29,9 +28,26 @@ class Routing{
         }
         //// found and set method
         sizeof($this->current_route) == 1 ? $method = "index" : $method = $this->current_route[1];
-
         ////
-        $class = "application\controllers\" . $this->current_route[0];
+        $class = "application\controllers\\" . $this->current_route[0];
+        //// create obj  from class controller
+        $object = new $class;
+        //// run  method in class controller
+        if(method_exists($object,$method)){
+           //// 
+           $reflection = new ReflectionMethod($object,$method);
+           $parameterCount = $reflection->getNumberOfParameters();
+           ////
+           if($parameterCount <= count(array_slice($this->current_route,2)))
+           {
+                call_user_func_array(array($object,$method),array_slice($this->current_route,2));
+                 echo "404 - parameter error";
+                 exit;
+           }
+        }else{
+            echo "404 - method not exists";
+            exit;
+        }
 
     }
 
