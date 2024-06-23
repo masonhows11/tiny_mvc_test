@@ -14,6 +14,7 @@ class Routing{
 
         global $current_route;
         $this->current_route = explode('/',$current_route);
+       
         
     }
 
@@ -26,6 +27,8 @@ class Routing{
             echo "404 - file not exists";
             exit;
         }
+       
+
         //// found and set method
         sizeof($this->current_route) == 1 ? $method = "index" : $method = $this->current_route[1];
         ////
