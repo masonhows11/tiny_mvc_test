@@ -22,7 +22,7 @@ class Routing
         //// found and set controller
         $path = realpath(dirname(__FILE__) . "/../../application/controllers/" . $this->current_route[0] . ".php");
         if (!file_exists($path)) {
-            echo "404 - file not exists";
+            echo "404 - controller not found";
             exit;
         }
 
@@ -47,7 +47,7 @@ class Routing
                 exit;
             }
         } else {
-            echo "404 - method not exists";
+            echo "404 - method not found";
             exit;
         }
     }
