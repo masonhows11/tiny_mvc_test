@@ -10,4 +10,5 @@ $base_dir = "/tinymvc/";
 $tmp = explode('?',$_SERVER['REQUEST_URI']);
 // current route
 $current_route = str_replace($base_dir,'',$tmp[0]);
+
 unset($tmp);
