@@ -6,7 +6,13 @@ class Home {
 
     public function index(){
 
-        echo "hi";
+        echo "hi from home controller" .PHP_EOL;
+    }
+
+
+    public function create(){
+
+        echo "hi from create fun in home controller" .PHP_EOL;
     }
 
 }
