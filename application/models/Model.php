@@ -36,4 +36,52 @@ class Model{
 
     }
 
+
+
+    protected function query($query , $values = null)
+    {
+        try {
+
+            if($values == null)
+            {
+                return $this->connection->query($query);
+
+            } else {
+
+                $stm = $this->connection->prepare($query);
+                $stm->execute($values);
+                return $stm;
+            }
+            
+        } catch ( PDOException $ex) {
+            
+            echo " Could not execute statement database: " . $ex->getMessage();
+        }
+    }
+
+
+    protected function execute($query , $values = null)
+    {
+
+        try {
+
+            if($values == null)
+            {
+                return $this->connection->exec($query);
+
+            } else {
+
+                $stm = $this->connection->prepare($query);
+                $stm->execute($values);
+            }
+            return true;
+            
+        } catch ( PDOException $ex) {
+            
+            echo " Could not execute statement database: " . $ex->getMessage();
+            return false;
+        }
+
+    }
+
 }
