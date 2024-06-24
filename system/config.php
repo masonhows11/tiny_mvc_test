@@ -20,6 +20,6 @@ unset($tmp);
 
 
 $dbHost = 'localhost';
-$dbName = 'tinymvc_db';
+$dbName = 'tinymvcdb';
 $dbUserName = 'root';
 $dbPassword = '1289..//';
