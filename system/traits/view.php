@@ -13,7 +13,7 @@ trait View
         if ($data) {
 
             extract($data);
-            $path = realpath(dirname(__FILE__) . "/../../application/view/" . $dir . ".php");
+            $path = realpath(dirname(__FILE__) . "/../../application/views/" . $dir . ".php");
             if (\file_exists($dir)) {
                 return require_once($path);
             } else {
