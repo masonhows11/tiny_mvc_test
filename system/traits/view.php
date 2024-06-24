@@ -6,19 +6,20 @@ namespace system\traits;
 trait View
 {
 
-
-    protected function view(string $dir, $data  = null)
+    protected function view($dir, $data  = null)
     {
+       
         $dir = str_replace('.', '/', $dir);
-        if ($data) {
-
+     
+        if ($data) 
             extract($data);
+
             $path = realpath(dirname(__FILE__) . "/../../application/views/" . $dir . ".php");
-            if (\file_exists($dir)) {
+            if (file_exists($path)) {
                 return require_once($path);
             } else {
                 echo "the view [".$dir."] not found";
             }
-        }
+        
     }
 }

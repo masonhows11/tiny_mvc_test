@@ -12,7 +12,7 @@ class Home  extends Controller{
 
 
     public function create(){
-
+        $this->view('app.create');
        // echo "hi from create fun in home controller" .PHP_EOL;
     }
 
