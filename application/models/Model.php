@@ -10,6 +10,7 @@ class Model{
 
     protected $connection;
 
+    // initial connection
     public function __construct()
     {
         
@@ -34,6 +35,18 @@ class Model{
            }               
         }
 
+    }
+
+
+    public function __destruct()
+    {
+        $this->closeConnection();
+    }
+
+
+    // close connection
+    protected function closeConnection(){
+        $this->connection = null;
     }
 
 
