@@ -6,7 +6,8 @@ class Home  extends Controller{
 
     public function index(){
 
-        $this->view('app.index');
+        $product = 'mobile';
+        $this->view('app.index',compact('product'));
        // echo "hi from index fun home controller" .PHP_EOL;
     }
 

@@ -12,6 +12,9 @@
     <h1>
         this is a view index
     </h1>
+    <p>
+        <?php echo $product ?>
+    </p>
 
 </body>
 
