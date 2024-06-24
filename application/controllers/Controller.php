@@ -6,9 +6,9 @@ namespace application\controllers;
 use system\traits\Redirect;
 use system\traits\View;
 
-class Controller{
+class Controller {
 
-    use Redirect;
-    use View;
+    use Redirect,View;
+
 
 }
