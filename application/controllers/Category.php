@@ -9,7 +9,10 @@ class Category  extends Controller
 
     public function index()
     {
-        # code...
+        $category = new  CategoryModel;
+        $categories = $category->all();
+        
+        return  $this->view('panel.article.index', compact('categories'));
     }
 
     public function create()
