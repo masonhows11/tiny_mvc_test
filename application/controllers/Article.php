@@ -11,20 +11,19 @@ class Article extends Controller
 
     public function index()
     {
-       
+
         $article = new  ArticleModel;
-       // $articles = $article->all(); 
-       // printf($articles);
-       //,compact('articles')
-        return  $this->view('panel.article.index');
+        $articles = $article->all();
+        printf($articles);
+        return  $this->view('panel.article.index', compact('articles'));
     }
 
     public function create()
     {
-        
+
         $category = new  Category;
-        $categories = $category->all(); 
-        return  $this->view('panel.article.create',compact('categories'));
+        $categories = $category->all();
+        return  $this->view('panel.article.create', compact('categories'));
     }
 
 
@@ -34,41 +33,36 @@ class Article extends Controller
         $article = new  ArticleModel;
         $article->insert($_POST);
         return $this->redirect('article');
-        
     }
 
     public function edit($id)
     {
         $category = new  Category;
-        $categories = $category->all(); 
+        $categories = $category->all();
 
 
         $obj_article = new  ArticleModel;
-        $article = $obj_article->find($id); 
-      
-        return  $this->view('panel.article.edit',compact('article'));
+        $article = $obj_article->find($id);
+
+        return  $this->view('panel.article.edit', compact('article'));
     }
 
     public function update($id)
     {
         $obj_article = new  ArticleModel;
-        $obj_article->update($id,$_POST); 
+        $obj_article->update($id, $_POST);
         return $this->redirect('article');
     }
 
     public function delete($id)
     {
-       
+
         $obj_article = new  ArticleModel;
-        $obj_article->delete($id); 
+        $obj_article->delete($id);
         return $this->back();
     }
 
 
     public function show($id)
-    {
-        
-    }
-
-   
+    { }
 }
