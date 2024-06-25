@@ -14,7 +14,7 @@ class Model{
     public function __construct()
     {
         
-        if(isset($connection))
+        if(!isset($connection))
         {
             // connect database info
             global $dbHost,$dbName,$dbUserName,$dbPassword;
