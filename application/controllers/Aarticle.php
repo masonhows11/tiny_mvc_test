@@ -6,7 +6,6 @@ class Article extends Controller{
 
 
 
-    
     public function index()
     {
         # code...
@@ -17,22 +16,29 @@ class Article extends Controller{
         # code...
     }
 
+   
     public function store()
     {
         # code...
     }
 
-    public function edit()
+    public function edit($id)
     {
         # code...
     }
 
-    public function update()
+    public function update($id = null)
     {
         # code...
     }
 
-    public function delete()
+
+    public function show($id)
+    {
+        # code...
+    }
+
+    public function delete($id)
     {
         # code...
     }
