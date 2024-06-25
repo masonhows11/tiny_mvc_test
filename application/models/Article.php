@@ -19,7 +19,7 @@ class Article extends Model
     {
         # code...
         $query  = "SELECT * , (SELECT `name` FROM `categories` WHERE `categories`.`id` = `articles`.`cat_id`) as `category` FROM `articles` WHERE id = ? ";
-        $result = $this->query($query, [$id])->fetchAll();
+        $result = $this->query($query, [$id])->fetch();
         $this->closeConnection();
         return $result;
     }
