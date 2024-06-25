@@ -8,7 +8,7 @@
 //// worked with this base url
 $base_url = "http://localhost/tinymvc/";
 //
-$base_url = "http://tinymvc.test";
+// $base_url = "http://tinymvc.test";
 // define base dir path
 $base_dir = "/tinymvc/";
 // tmp current route
@@ -20,6 +20,6 @@ unset($tmp);
 
 
 $dbHost = 'localhost';
-$dbName = 'tinymvcdb';
+$dbName = 'mvc_blog';
 $dbUserName = 'root';
 $dbPassword = '1289..//';
