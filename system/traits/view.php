@@ -26,7 +26,7 @@ trait View
     protected function asset($dir)
     {
         global $base_url;
-        $path = $base_url . "pubic/" . $dir;
+        $path = $base_url . "public/" . $dir;
         echo $path;
     }
 
