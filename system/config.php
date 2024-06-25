@@ -6,7 +6,7 @@
 // $base_url = "http://tinymvc.test";
 
 //// worked with this base url
-$base_url = "http://localhost/tinymvc";
+$base_url = "http://localhost/tinymvc/";
 //
 $base_url = "http://tinymvc.test";
 // define base dir path
