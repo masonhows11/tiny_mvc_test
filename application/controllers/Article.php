@@ -14,7 +14,7 @@ class Article extends Controller
 
         $article = new  ArticleModel;
         $articles = $article->all();
-        printf($articles);
+        
         return  $this->view('panel.article.index', compact('articles'));
     }
 
