@@ -2,6 +2,8 @@
 
 namespace application\controllers;
 
+use application\models\Category as CategoryModel;
+
 class Category  extends Controller
 {
 
@@ -15,7 +17,7 @@ class Category  extends Controller
         # code...
     }
 
-   
+
     public function store()
     {
         # code...
@@ -26,7 +28,7 @@ class Category  extends Controller
         # code...
     }
 
-    public function update($id = null)
+    public function update($id, $value)
     {
         # code...
     }
@@ -41,6 +43,4 @@ class Category  extends Controller
     {
         # code...
     }
-
-    
 }
