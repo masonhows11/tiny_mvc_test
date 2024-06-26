@@ -16,24 +16,18 @@
             </tr>
         </thead>
         <tbody>
+            <?php foreach( $categories as $category) : ?>
             <tr>
-                <td>1</td>
-                <td>Sport</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td><?php echo $category['id'] ?></td>
+                <td><?php echo $category['name'] ?></td>
+                <td><?php echo substr($category['description'],0,40)."..." ?></td>
                 <td>
                     <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
                     <a href="#" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>News</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                <td>
-                    <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                </td>
-            </tr>
+            <?php endforeach ?>
+            
         </tbody>
     </table>
 </section>
