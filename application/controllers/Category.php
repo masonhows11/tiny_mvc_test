@@ -43,6 +43,8 @@ class Category  extends Controller
     public function update($id)
     {
         # code...
+        // var_dump($id,$_POST);
+        // die();
         $obj_category = new  CategoryModel;
         $obj_category->update($id, $_POST);
         return $this->redirect('category');

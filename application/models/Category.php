@@ -2,7 +2,8 @@
 
 namespace application\models;
 
-class Category extends Model{
+class Category extends Model
+{
 
 
     public function all()
@@ -37,14 +38,18 @@ class Category extends Model{
     public function insert($values)
     {
         # code...
+
         $query  = "INSERT INTO `categories` (`name` , `description` , created_at) VALUES (?,?,now())";
         $this->execute($query, array_values($values));
         $this->closeConnection();
     }
 
-    public function update($id,$values)
+    public function update($id, $values)
     {
         # code...
+
+        // var_dump($id, $values);
+        // die();
 
         $query  = "UPDATE `categories` SET `name` = ? , `description` = ? , `updated_at` = now() , WHERE `id` = ? ";
 
@@ -63,7 +68,4 @@ class Category extends Model{
 
         $this->closeConnection();
     }
-
-
-
 }
