@@ -48,10 +48,7 @@ class Category extends Model
     {
         # code...
 
-        // var_dump($id, $values);
-        // die();
-
-        $query  = "UPDATE `categories` SET `name` = ? , `description` = ? , `updated_at` = now() , WHERE `id` = ? ";
+        $query  = "UPDATE `categories` SET `name` = ? , `description` = ? , `updated_at` = now()  WHERE id = ? ; ";
 
         $this->execute($query, array_merge(array_values($values), [$id]));
 

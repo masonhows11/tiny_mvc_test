@@ -36,7 +36,7 @@ class Article extends Model
     public function update($id, $values)
     {
         
-        $query  = "UPDATE `articles` SET `title` = ? , `cat_id` = ? , `body` = ?  , `updated_at` = now() , WHERE `id` = ? ";
+        $query  = "UPDATE `articles` SET `title` = ? , `cat_id` = ? , `body` = ?  , `updated_at` = now()  WHERE `id` = ?; ";
 
         $this->execute($query, array_merge(array_values($values), [$id]));
 
