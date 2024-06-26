@@ -18,7 +18,6 @@ class Category  extends Controller
     public function create()
     {
         # code...
-
         return $this->view('panel.category.create');
     }
 
@@ -34,9 +33,10 @@ class Category  extends Controller
     public function edit($id)
     {
         # code...
+       
         $obj_category = new  CategoryModel;
         $category = $obj_category->find($id);
-
+       
         return  $this->view('panel.category.edit', compact('category'));
     }
 

@@ -50,6 +50,7 @@ class Article extends Controller
 
     public function update($id)
     {
+        
         $obj_article = new  ArticleModel;
         $obj_article->update($id, $_POST);
         return $this->redirect('article');

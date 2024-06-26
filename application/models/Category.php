@@ -27,7 +27,7 @@ class Category extends Model{
     public function find($id)
     {
         # code...
-        $query  = "SELECT * FROM  `articles` WHERE id = ? ";
+        $query  = "SELECT * FROM  `categories` WHERE id = ? ";
         $result = $this->query($query, [$id])->fetch();
         $this->closeConnection();
         return $result;
