@@ -64,5 +64,7 @@ class Article extends Controller
 
 
     public function show($id)
-    { }
+    { 
+        
+    }
 }
