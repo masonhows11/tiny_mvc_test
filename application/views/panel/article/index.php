@@ -24,8 +24,8 @@
                 <td><?php echo $article['cat_id']; ?></td>
                 <td><?php echo substr($article['body'], 0 , 40)."..."; ?></td>
                 <td>
-                    <a href="<?php $this->url('article/edit',$article['id']); ?>" class="btn btn-info btn-sm">Edit</a>
-                    <a href="<?php $this->url('article/delete',$article['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="<?php $this->url('article/edit/',$article['id'] ); ?>" class="btn btn-info btn-sm">Edit</a>
+                    <a href="<?php $this->url('article/delete/',$article['id'] ); ?>" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
             <?php } ?>
