@@ -1,6 +1,6 @@
 <?php $this->include('panel.layouts.header') ?>
 
-<form>
+<form action="<?php $this->url('category/store') ?>" method="POST">
     <section class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" placeholder="name ...">

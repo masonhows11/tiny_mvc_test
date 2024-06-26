@@ -53,7 +53,7 @@ class Category  extends Controller
         # code...
         $obj_category = new   CategoryModel;
         $obj_category->delete($id);
-        return $this->back();
+        return $this->redirectBack();
     }
 
     public function show($id)

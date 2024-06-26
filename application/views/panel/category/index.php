@@ -22,8 +22,8 @@
                 <td><?php echo $category['name'] ?></td>
                 <td><?php echo substr($category['description'],0,40)."..." ?></td>
                 <td>
-                    <a href="<?php $this->url('category/edit/',$category['id']); ?>" class="btn btn-info btn-sm">Edit</a>
-                    <a href="<?php $this->url('category/delete/',$category['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="<?php $this->url('category/edit/'.$category['id'],); ?>" class="btn btn-info btn-sm">Edit</a>
+                    <a href="<?php $this->url('category/delete/'.$category['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
             <?php endforeach ?>

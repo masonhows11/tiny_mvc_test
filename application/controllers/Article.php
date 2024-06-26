@@ -30,6 +30,7 @@ class Article extends Controller
     public function store()
     {
 
+       
         $article = new  ArticleModel;
         $article->insert($_POST);
         return $this->redirect('article');
@@ -44,7 +45,7 @@ class Article extends Controller
         $obj_article = new  ArticleModel;
         $article = $obj_article->find($id);
 
-        return  $this->view('panel.article.edit', compact('article'));
+        return  $this->view('panel.article.edit', compact('article','categories'));
     }
 
     public function update($id)
@@ -59,7 +60,7 @@ class Article extends Controller
 
         $obj_article = new  ArticleModel;
         $obj_article->delete($id);
-        return $this->back();
+        return $this->redirectBack();
     }
 
 
