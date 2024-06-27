@@ -40,8 +40,6 @@ class Home  extends Controller
         $articles = $obj_category->articles($id);
 
         return $this->view('app.category',compact('category','categories','articles'));
-
-
         
     }
 
