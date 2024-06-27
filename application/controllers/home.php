@@ -25,12 +25,37 @@ class Home  extends Controller
 
     public function category($id)
     {
+
         # code...
+
+        $obj_category = new  Category;
+        $categories = $obj_category->all();
+
+
+        $obj_category = new  Category;
+        $category = $obj_category->find($id);
+
+
+        $obj_category = new  Category;
+        $articles = $obj_category->articles($id);
+
+        return $this->view('app.index',compact('category','categories','articles'));
+
+
+        
     }
 
     public function show($id)
     {
         # code...
+        $obj_category = new  Category;
+        $categories = $obj_category->all();
+
+
+        $obj_article = new  Article;
+        $article = $obj_article->find($id);
+
+        return $this->view('app.details',compact('categories','article'));
     }
 
     // public function index()
