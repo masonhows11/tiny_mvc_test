@@ -1,4 +1,4 @@
-<?php $this->include("app.layouts.header") ?>
+<?php $this->include("app.layouts.header",['categories' => $categories]) ?>
 
 <section class="container my-5">
     <section class="row">
