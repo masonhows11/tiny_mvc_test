@@ -2,6 +2,9 @@
 
 namespace application\controllers;
 
+use application\models\Article;
+use application\models\Category;
+
 class Home  extends Controller
 {
 
@@ -10,11 +13,19 @@ class Home  extends Controller
     public function index()
     {
         # code...
+
+        $category = new  Category;
+        $categories = $category->all();
+
+        $article = new  Article;
+        $articles = $article->all();
+
+        return $this->view('app.index',compact('categories','articles'));
     }
 
     public function category($id)
     {
-
+        # code...
     }
 
     public function show($id)
