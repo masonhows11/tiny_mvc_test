@@ -55,7 +55,7 @@ class Home  extends Controller
         $obj_article = new  Article;
         $article = $obj_article->find($id);
 
-        return $this->view('app.details',compact('categories','article'));
+        return $this->view('app.detail',compact('categories','article'));
     }
 
     // public function index()
